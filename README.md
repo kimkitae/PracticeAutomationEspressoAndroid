@@ -37,7 +37,7 @@ Espresso 를 이용한 Android 자동화
 <br/>
 - 계정 설정 화면으로 이동  
 - 왼쪽 하단 메뉴에 있는 `Developer settings` 이동  
-- `Personal access tokens' 클릭  
+- `Personal access tokens` 클릭  
 - `Generate new token` 클릭  
 - `repo` 체크 후 생성  
 

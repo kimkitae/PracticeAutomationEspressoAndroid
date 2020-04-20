@@ -13,7 +13,7 @@ Espresso 를 이용한 Android 자동화
 
 
 
-2. Github 소스 URL 복제하기  
+**2. Github 소스 URL 복제하기**  
 
 ![image](https://user-images.githubusercontent.com/8774245/79738518-d2b8fc80-8337-11ea-8aa5-bf428e1aaf96.png)  
 
@@ -26,8 +26,9 @@ Espresso 를 이용한 Android 자동화
 ##### 클론 시 authentication 을 물어 볼 시 본인의 계정 정보 입력.
 
 
-#올바르 비밀번호를 입력했음에도 authentication Error 발생 시 아래의 절차대로 Token을 생성한다.  
-<br/>
+# 올바르 비밀번호를 입력했음에도 authentication Error 발생 시 아래의 절차대로 Token을 생성한다.  
+
+
 ![1014235A-1A05-418A-B669-02D729C9F059](https://user-images.githubusercontent.com/8774245/79739006-87ebb480-8338-11ea-874c-fc2e4a67b070.png)
 <br/>
 - 계정 설정 화면으로 이동  
@@ -36,5 +37,5 @@ Espresso 를 이용한 Android 자동화
 - `Generate new token` 클릭  
 - `repo` 체크 후 생성  
 
-## 이후 authentication 인증 시 해다 토큰을 비밀번호 대신 사용  
-#Token 값 잃어버렸을 시 새로 Regenerate 하면 됩니다.
+## 이후 authentication 인증 시 해당 토큰을 비밀번호 대신 사용  
+# Token 값 잃어버렸을 시 새로 Regenerate 하면 됩니다.

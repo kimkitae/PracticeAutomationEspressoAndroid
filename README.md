@@ -21,6 +21,7 @@ Espresso 를 이용한 Android 자동화
 - Clone with HTTPS를 확인 후 아래의 URL을 복사  
 ![image](https://user-images.githubusercontent.com/8774245/79738626-f2502500-8337-11ea-94cd-1b3c0954a63b.png)  
 - URL에서 복제 버튼 클릭  
+- SourceTree 앱 실행  
 ![image](https://user-images.githubusercontent.com/8774245/79738771-2d525880-8338-11ea-8f55-e9d3bd36777e.png)  
 - 클론을 클릭이후 목적지 경로에 보이는 경로에 프로젝트 폴더가 복제 됩니다.  
 ##### 클론 시 authentication 을 물어 볼 시 본인의 계정 정보 입력.
@@ -28,6 +29,9 @@ Espresso 를 이용한 Android 자동화
 
 # 올바르 비밀번호를 입력했음에도 authentication Error 발생 시 아래의 절차대로 Token을 생성한다.  
 
+<details>
+<summary>접기/펼치기 버튼</summary>
+<div markdown="1">
 
 ![1014235A-1A05-418A-B669-02D729C9F059](https://user-images.githubusercontent.com/8774245/79739006-87ebb480-8338-11ea-874c-fc2e4a67b070.png)
 <br/>
@@ -39,3 +43,7 @@ Espresso 를 이용한 Android 자동화
 
 ## 이후 authentication 인증 시 해당 토큰을 비밀번호 대신 사용  
 # Token 값 잃어버렸을 시 새로 Regenerate 하면 됩니다.
+
+
+</div>
+</details>

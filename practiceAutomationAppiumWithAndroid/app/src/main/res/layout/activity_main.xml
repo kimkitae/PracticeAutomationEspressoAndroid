@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#f7786b"
-        android:text="first"
+        android:text="Hello World"
         android:textSize="30dp"
         android:id="@+id/title"
         ></TextView>

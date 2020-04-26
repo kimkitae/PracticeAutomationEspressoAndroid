@@ -11,64 +11,56 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textView;
-    private Button button1;
-    private Button button2;
-    private EditText edittext;
-    private Button moveBtn;
+
+    private Button btn1;
+    private Button btn2;
+    private TextView txv1;
+    private EditText edt;
+    private Button mbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        System.out.println("앱 실행");
         setContentView(R.layout.activity_main);
 
-        textView = (TextView) findViewById(R.id.textView1);
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        edittext = (EditText)findViewById(R.id.edittext);
-        moveBtn = (Button)findViewById(R.id.moveBtn);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                textView.setText("변경되었습니다.");
-            }
-        });
+    btn1 = (Button)findViewById(R.id.btn1);
+    btn2 = (Button)findViewById(R.id.btn2);
+    mbtn = (Button)findViewById(R.id.mbtn);
+    txv1 = (TextView)findViewById(R.id.title);
+    edt = (EditText) findViewById(R.id.edt);
 
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textView.setText(edittext.getText());
-            }
-        });
+    btn1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txv1.setText("1번 버튼의 결과");
+        }
+    });
 
-        textView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                textView.setText("Hello World");
-                return false;
-            }
-        });
+    btn2.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            txv1.setText(edt.getText());
+        }
+    });
 
-        moveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ListActivity.class);
-                getApplicationContext().startActivity(intent);
-            }
-        });
+    btn2.setOnLongClickListener(new View.OnLongClickListener() {
+        @Override
+        public boolean onLongClick(View v) {
+            txv1.setText("초기화 되었습니다.");
+            return true;
+        }
+    });
+    mbtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), ListActivity.class);
+            getApplicationContext().startActivity(intent);
+        }
+    });
 
-        moveBtn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Toast.makeText(getApplicationContext(),"테스트",Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
     }
 }

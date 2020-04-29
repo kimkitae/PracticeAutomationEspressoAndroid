@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    public static final int sub = 1001;
+
 
     private Button btn1;
     private Button btn2;
@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    btn1 = (Button)findViewById(R.id.button1);
-    btn2 = (Button)findViewById(R.id.button2);
-    txv1 = (TextView)findViewById(R.id.textview);
-    edt = (EditText) findViewById(R.id.edittext);
-    mbtn = (Button)findViewById(R.id.movebtn);
+    btn1 = (Button)findViewById(R.id.btn1);
+    btn2 = (Button)findViewById(R.id.btn2);
+    mbtn = (Button)findViewById(R.id.mbtn);
+    txv1 = (TextView)findViewById(R.id.title);
+    edt = (EditText) findViewById(R.id.edt);
 
 
     btn1.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), ListActivity.class);
-            startActivityForResult(intent,sub);
+            getApplicationContext().startActivity(intent);
         }
     });
 

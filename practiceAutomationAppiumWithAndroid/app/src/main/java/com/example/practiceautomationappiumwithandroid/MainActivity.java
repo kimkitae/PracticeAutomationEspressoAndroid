@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    public static final int sub = 1001;
     private Button btn1;
     private Button btn2;
     private TextView txv1;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), ListActivity.class);
-            getApplicationContext().startActivity(intent);
+            startActivityForResult(intent,sub);
         }
     });
 

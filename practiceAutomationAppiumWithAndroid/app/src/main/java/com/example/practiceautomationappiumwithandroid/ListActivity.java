@@ -1,22 +1,20 @@
 package com.example.practiceautomationappiumwithandroid;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.ViewAnimator;
 
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
 
-    private ListView listview;
+    ArrayList<String> items;
+    ArrayAdapter<String> adapter;
+    ListView listView;
 
 
     @Override
@@ -24,41 +22,49 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listviewexam);
 
-        listview = (ListView)findViewById(R.id.listview);
+        //ready to data
+        items = new ArrayList<String>();
+        items.add("ak");
+        items.add("bk");
+        items.add("ck");
+        items.add("dk");
+        items.add("ek");
 
-        List<String> data = new ArrayList<>();
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,data);
-        listview.setAdapter(adapter);
-
-        data.add("가");
-        data.add("나");
-        data.add("다");
-        data.add("라");
-        data.add("마");
-        data.add("바");
-        data.add("사");
-        data.add("아");
-        data.add("자");
-        data.add("차");
-        data.add("카");
-        data.add("타");
-        data.add("파");
-        data.add("하");
-        data.add("1");
-        data.add("2");
-        data.add("3");
-        data.add("4");
-        data.add("5");
-        data.add("6");
-        data.add("7");
-        data.add("8");
-        data.add("9");
-        data.add("10");
-        adapter.notifyDataSetChanged();
+        //install to adapter
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,items);
 
 
-    }
+        //setting to adapter
+        listView = (ListView) findViewById(R.id.ListView);
+        listView.setAdapter(adapter);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE); //setting to select only one
+
+        }
+
+        public void mOnClick(View v){
+            EditText ed = (EditText)findViewById(R.id.newitem);
+            switch (v.getId()){
+                case R.id.btnAdd: //when it press the add button
+                    String text = ed.getText().toString(); //get value in EditText
+                    if (!text.isEmpty()) {
+
+                        items.add(text);
+                        ed.setText("");
+                        adapter.notifyDataSetChanged();
+                    }
+                break;
+                case R.id.btnDelete:
+                    int pos = listView.getCheckedItemPosition();
+
+                    if (pos!=ListView.INVALID_POSITION) {
+                        items.remove(pos);
+
+                        listView.clearChoices();
+                        adapter.notifyDataSetChanged();
+                    }
+                break;
+            }
+
+        }
+
 }
-
-

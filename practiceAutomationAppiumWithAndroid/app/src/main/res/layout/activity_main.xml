@@ -21,8 +21,8 @@
         android:background="#f7786b"
         android:text="Hello World"
         android:textSize="30dp"
-        android:id="@+id/title"
-        ></TextView>
+        android:id="@+id/title">
+    </TextView>
 
 
 </LinearLayout>
@@ -31,37 +31,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#91A8d0"
         android:text="btn1"
-        android:id="@+id/btn1"></Button>
+        android:id="@+id/btn1">
+    </Button>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#034F84"
-        android:text="btn2"
+        android:text="insert"
         android:id="@+id/btn2"
-        android:layout_margin="20dp"></Button>
+        android:layout_margin="20dp">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:id="@+id/reset">
+    </Button>
 
 </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
-
+        android:gravity="center"
+        android:orientation="vertical">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="아무거나 입력 하시오."
-        android:id="@+id/edt"></EditText>
+        android:id="@+id/edt">
+    </EditText>
 
 
     </LinearLayout>
@@ -75,7 +84,8 @@
             android:layout_height="wrap_content"
             android:background="#98ddde"
             android:text="movebtn"
-            android:id="@+id/mbtn"></Button>
+            android:id="@+id/mbtn">
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

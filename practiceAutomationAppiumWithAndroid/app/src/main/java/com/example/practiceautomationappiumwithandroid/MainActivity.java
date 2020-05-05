@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn2;
     private TextView txv1;
     private EditText edt;
+    private Button reset;
     private Button mbtn;
 
     @Override
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     btn1 = (Button)findViewById(R.id.btn1);
     btn2 = (Button)findViewById(R.id.btn2);
+    reset = (Button)findViewById(R.id.reset);
     mbtn = (Button)findViewById(R.id.mbtn);
     txv1 = (TextView)findViewById(R.id.title);
     edt = (EditText) findViewById(R.id.edt);
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    btn2.setOnLongClickListener(new View.OnLongClickListener() {
+    reset.setOnLongClickListener(new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View v) {
             txv1.setText("초기화 되었습니다.");
